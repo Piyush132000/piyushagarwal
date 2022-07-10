@@ -1,0 +1,22 @@
+.content {
+
+
+  .typewriter {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 56px;
+    color: $color-white;
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .typewriter span {
+    color: $color-cursor;
+    text-transform: uppercase;
+    padding: 10px;
+    border-right: solid $color-cursor 10px;
+    animation: cursor 1s ease-in-out infinite;
+  }
+}
