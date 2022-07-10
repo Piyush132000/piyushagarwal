@@ -11,10 +11,9 @@
                 alt="Avatar"
               />
               <div class="d-grid">
-              <span class="name">{{ title }}</span>
-              <span >Software Consultant</span>
-            </div>
-
+                <span class="name">{{ title }}</span>
+                <span>Software Consultant</span>
+              </div>
             </div>
             <mat-icon
               class="cross"
@@ -26,12 +25,43 @@
         </div>
       </div>
       <ul class="list">
-        <li class="list_item"><mat-icon>home</mat-icon>   Home</li>
-        <li class="list_item"><mat-icon>info</mat-icon>   About</li>
-        <li class="list_item"><img src="./assets/images/project.png" style="width: 30px;height: 30px;">Projects</li>
-        <li class="list_item"><mat-icon>group_add</mat-icon>   Connect</li>
-        <li class="list_item"><img src="./assets/images/template.png" style="width: 30px;height: 30px;">   Templates</li>
-        <li class="list_item"><mat-icon>article</mat-icon>   Blogs</li>
+        <li class="list_item">
+          <a (click)="toggleDrawer()" href="#home"
+            ><mat-icon>home</mat-icon> Home</a
+          >
+        </li>
+        <li class="list_item">
+          <a (click)="toggleDrawer()" href="#aboutme"
+            ><mat-icon>info</mat-icon>About Me</a
+          >
+        </li>
+        <li class="list_item">
+          <a (click)="toggleDrawer()" href="#aboutme">
+            <img
+              src="./assets/images/project.png"
+              style="width: 30px; height: 30px"
+            />Projects</a
+          >
+        </li>
+        <li class="list_item">
+          <a (click)="toggleDrawer()" href="#aboutme"
+            ><mat-icon>group_add</mat-icon> Connect</a
+          >
+        </li>
+        <li class="list_item">
+          <a (click)="toggleDrawer()" href="#aboutme">
+            <img
+              src="./assets/images/template.png"
+              style="width: 30px; height: 30px"
+            />
+            Templates</a
+          >
+        </li>
+        <li class="list_item">
+          <a (click)="toggleDrawer()" href="#aboutme"
+            ><mat-icon>article</mat-icon> Blogs</a
+          >
+        </li>
       </ul>
     </div>
   </ng-container>
