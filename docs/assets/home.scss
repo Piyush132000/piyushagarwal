@@ -3,19 +3,29 @@ header {
   padding: 10px;
   background-color: $color-transparent;
   position: fixed;
-  .example-spacer {
-    flex: 1 1 auto;
-  }
 
   .mat-toolbar {
     height: 60px;
     padding: 10px;
     border-radius: 10px;
     background-color: $color-body;
-   box-shadow: 0 1.5rem 4rem rgb($color-white, 0.4);
+    box-shadow: 0 1.5rem 4rem rgb($color-white, 0.4);
 
-    .name{
-      color: $color-white
+    .example-spacer {
+      flex: 1 1 auto;
+    }
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      .example-spacer {
+        display: none;
+      }
+    }
+
+    .name {
+      color: $color-white;
     }
 
     .header-icon {
@@ -28,13 +38,19 @@ header {
         color: $color-white;
       }
     }
-    .header-icon:not(first-child):hover {
+    .header-icon:not(:first-child):hover {
       transform: translateY(-1px) scale(1.2);
       transition: all;
 
       .mat-icon:active {
         transform: translateY(2px);
         transition: all;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-icon:not(:first-child) {
+        display: none;
       }
     }
   }
@@ -51,7 +67,6 @@ header {
   animation-name: moveInLeft;
   animation-duration: 1s;
   transition: all;
-
 }
 
 .drawer-close {
@@ -67,9 +82,8 @@ header {
   animation-duration: 1s;
 }
 
-
-.drawer-close::before{
-  content: '';
+.drawer-close::before {
+  content: "";
   left: -550px;
 }
 
@@ -85,8 +99,6 @@ header {
   border-image-source: linear-gradient(to left, #00c853, #b2ff59) !important;
 }
 
-
-
 .list {
   display: block;
   padding: 10px;
@@ -95,27 +107,24 @@ header {
   animation-duration: 1s;
   transition: all;
 
-  &_item{
+  &_item {
     cursor: pointer;
     display: flex;
     align-items: center;
     padding: 13px;
     font-size: $font-size;
     margin-bottom: 5px;
+  }
+
+  &_item:hover {
+    background-color: $color-body;
+    border-radius: 5px;
+    color: $color-white;
+    animation-name: list-animation;
+    animation-duration: 0.7s;
+    transition: all;
+  }
 }
-
-&_item:hover{
-  background-color: $color-body;
-  border-radius: 5px;
-  color: $color-white;
-  animation-name: list-animation;
-  animation-duration: 0.7s;
-  transition: all;
-}
-
-}
-
-
 
 .custom-card {
   padding: 10px;
@@ -123,37 +132,30 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  &_body{
+  &_body {
     border-radius: 10px;
 
-    &__img{
+    &__img {
       display: flex;
       align-items: center;
 
-      img{
+      img {
         width: 50px;
         height: 50px;
       }
 
-      .name{
+      .name {
         font-size: $font-size;
-
       }
     }
   }
-
 }
 
-
-
-
 .cross {
+  color: $color-black;
 
- color: $color-black;
-
-  &:hover{
-    animation-name:  rotate-sign;
+  &:hover {
+    animation-name: rotate-sign;
     animation-duration: 1s;
   }
 }
-

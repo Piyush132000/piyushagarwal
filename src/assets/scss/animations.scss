@@ -58,3 +58,14 @@
     @media (max-width: 768px) {
       .typewriter { font-size: 36px; }
     }
+
+
+
+    @keyframes UPandDOWN{
+      0%{
+        transform: translateY(-3px);
+      }
+      100%{
+        transform: translateY(0);
+      }
+    }
