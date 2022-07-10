@@ -6,9 +6,10 @@ header {
 
   .mat-toolbar {
     height: 60px;
+    z-index: 10;
     padding: 10px;
     border-radius: 10px;
-    background-color: $color-body;
+    background-color: $color-transparent;
     box-shadow: 0 1.5rem 4rem rgb($color-white, 0.4);
 
     .example-spacer {
@@ -26,6 +27,17 @@ header {
 
     .name {
       color: $color-white;
+      &::first-letter {
+        padding: 5px 10px;
+        line-height: 1.5;
+        color: $color-cursor;
+        background-color: $color-white;
+        border-radius: 50%;
+      }
+
+      &::-ms-tooltip{
+       content:'Hii'
+      }
     }
 
     .header-icon {
@@ -134,6 +146,7 @@ header {
 
   &_body {
     border-radius: 10px;
+    padding: 10px;
 
     &__img {
       display: flex;
@@ -146,6 +159,13 @@ header {
 
       .name {
         font-size: $font-size;
+        &::first-letter {
+          padding: 5px 10px;
+          line-height: 1.5;
+          color: $color-cursor;
+          background-color: $color-body;
+          border-radius: 50%;
+        }
       }
     }
   }
