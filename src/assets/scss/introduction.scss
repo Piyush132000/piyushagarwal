@@ -1,0 +1,133 @@
+.introduction{
+
+
+  @extend .col-12;
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
+
+  @media (max-width:600px) {
+    flex-direction: column-reverse !important;
+
+  }
+
+
+
+
+  &_about-me{
+    @extend .col-6;
+
+    display: flex;
+    padding: 15rem 0rem;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+
+    @media (max-width:600px) {
+      padding: 10px;
+      width: 80% !important;
+
+     }
+
+
+    &_content{
+    h1{
+      width: 100%;
+      font-family:inherit;
+      font-size: 100px;
+      color: $color-white;
+      @media (max-width:600px) {
+
+        font-size: 50px;
+
+       }
+    }
+
+    &_about{
+      margin-top: 40px;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 20px;
+      color: $color-white;
+      font-weight: 100;
+      word-spacing: 1px;
+      line-height: 30px;
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      transition: ease-in;
+
+
+    }
+
+    &__line{
+      position: relative;
+      width: 100px;
+      height: 5px;
+      top:20px;
+      margin-top: 10px;
+      border-radius: 20px;
+      background-color: $color-cursor;
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      transition: ease-in;
+
+      &:last-child{
+        margin-left: 50px;
+      }
+
+    }
+
+
+
+  }
+
+  .check-my-profile{
+
+    display: flex;
+
+    a {
+      position: relative;
+    img{
+      cursor: pointer;
+      width: 50px;
+      margin: 10px;
+      height: 50px;
+    }
+  }
+
+  }
+}
+
+
+
+&_about_img{
+  padding: 15rem 0rem;
+  @extend .col-6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -11px 2px 12px -8px rgba(0, 0, 0, 0.75);
+
+  @media (max-width:600px) {
+   box-shadow: none;
+padding: 10px;
+
+  }
+
+
+  img{
+    border-radius: 50%;
+    filter: brightness(1.2);
+   width:500px;
+    height:500px;
+    @extend .shadow;
+    @media (max-width:600px) {
+      width: 300px;
+      height: 300px;
+    }
+
+  }
+
+}
+}

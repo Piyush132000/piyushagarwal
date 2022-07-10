@@ -73,6 +73,17 @@
     margin: 40px;
     margin-left: -50px;
 
+    @media (min-width:600px) {
+      &:nth-child(1){
+        animation-name: UPandDOWN;
+        animation-duration: 1s ;
+        animation-iteration-count: infinite;
+        transition: all;
+      }
+
+    }
+
+
     @media (max-width: 600px) {
       font-size: 25px;
       margin: 0px;
@@ -93,14 +104,16 @@
       }
       &:nth-child(3){
         text-transform: uppercase;
+
       }
     }
 
     &:first-child::after {
       content: ".";
       color: $color-cursor;
+      height: 0;
       border-radius: 50%;
-      animation: UPandDOWN 1s all infinite;
+      padding: 2px;
       @media (max-width:600px){
         content: "HEY! I AM";
         margin-left: -60px;
