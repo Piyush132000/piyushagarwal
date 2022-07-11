@@ -75,6 +75,10 @@ body {
       align-items: center;
       border-radius: 10px;
       box-shadow: 0 1.5rem 4rem rgb($color-white , 0.4);
+      @media (max-width:600px) {
+
+        margin-left: 10vw;
+      }
 
       &:hover{
         transform: translateY(-3px);
