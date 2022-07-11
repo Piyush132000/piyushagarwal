@@ -6,4 +6,9 @@ import { Component, } from '@angular/core';
 })
 export class HomeComponent {
 
+
+  downloadResume(){
+    window.open("./assets/images/resume.pdf");
+  }
+
 }

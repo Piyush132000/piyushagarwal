@@ -2,6 +2,7 @@
 
 @import "./assets/variables.scss";
 @import "./assets/scss/animations.scss";
+@import 'aos/dist/aos.css';
 
 @import "./assets/home.scss";
 @import "./assets/scss/home-main.scss";
@@ -10,6 +11,7 @@
 html,
 body {
   height: 100%;
+  overflow-x:hidden;
 }
 body {
   margin: 0;
@@ -17,7 +19,7 @@ body {
   padding: 0;
   background-color: $color-body !important;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -49,13 +51,44 @@ body {
   overflow-y: scroll;
   overflow: scroll;
   scrollbar-width: 10px;
+  scroll-behavior: smooth;
 
   .sections {
     display: flex;
     width: 100vw;
     height: 100vh;
     scroll-snap-align: start;
-    scroll-behavior: smooth;
+
+    .awesome-button{
+      cursor: pointer;
+      width: 100px;
+      height: 20px;
+      display: flex;
+      margin-left: 70px;
+      margin-top: 10px;
+      font-size: $font-size;
+      text-decoration: none;
+      color: $color-black;
+      justify-content: center;
+      padding: 25px 0px;
+      background-color: $color-white;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: 0 1.5rem 4rem rgb($color-white , 0.4);
+
+      &:hover{
+        transform: translateY(-3px);
+        transition: all;
+      }
+
+
+      &:active{
+        box-shadow: 0 .5rem 2rem rgb($color-white , 0.4);
+        transform: translateY(1px);
+        transition: all;
+      }
+    }
+
 
   }
 }

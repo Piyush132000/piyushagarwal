@@ -1,8 +1,8 @@
-<app-header style="z-index: 100"></app-header>
-<section id="home" class="sections animated">
+<app-header></app-header>
+<section id="home" style="z-index:-1 ;"  class="sections ">
   <app-home-main></app-home-main>
 </section>
-<section id="aboutme" class="introduction sections" >
+<section id="aboutme"  class="introduction sections" >
   <div class="introduction_about-me">
     <div class="introduction_about-me_content">
       <div>
@@ -12,7 +12,9 @@
       </div>
 
       <div class="introduction_about-me_content_about">
-        I'm an angular developer. Currently working in Knoldus Inc.
+        Innovative Front End Developer with 1.5-year of experience building
+        and maintaining responsive web applications. Proficient in
+        Angular,HTML, CSS, typescript, JavaScript. Currently working in Knoldus Inc.
       </div>
       <div class="check-my-profile">
         <a href="https://github.com/Piyush132000" target="_blank">
@@ -24,10 +26,11 @@
         >
           <img src="./assets/images/linkdin.png" />
         </a>
+        <a (click)="downloadResume()" class="awesome-button"><mat-icon>download</mat-icon>Resume</a>
       </div>
     </div>
   </div>
-  <div class="introduction_about_img">
+  <div class="introduction_about_img" style="z-index: -1;">
     <img src="./assets/images/Piyush.jpg" />
   </div>
 </section>
