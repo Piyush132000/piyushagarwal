@@ -70,8 +70,8 @@ header {
 
 .drawer-open {
   position: fixed;
-  margin: 10px;
-  width: 369px;
+  margin: 10px 20px;
+  width: 17vw;
   height: 100vh;
   z-index: 1;
   background-color: $color-white;
@@ -79,6 +79,10 @@ header {
   animation-name: moveInLeft;
   animation-duration: 1s;
   transition: all;
+
+  @media (max-width:600px) {
+    width: 90vw;
+  }
 }
 
 .drawer-close {
