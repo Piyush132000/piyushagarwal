@@ -84,19 +84,18 @@
         (event) => {
           const aosAnimation = document.querySelectorAll("[data-aos]");
           observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-              if (entry.intersectionRatio > 0) {
-                entry.target.classList.add("aos-animate");
+              if (entries[0].intersectionRatio > 0) {
+                entries[0].target.classList.add("aos-animate");
               } else {
-                entry.target.classList.remove("aos-animate");
+                entries[0].target.classList.remove("aos-animate");
               }
-            });
           });
+
           aosAnimation.forEach((aosObject) => {
             observer.observe(aosObject);
           });
         },
-        { capture: true, passive: true }
+         { capture: true, passive: true }
       );
     </script>
   </body>
