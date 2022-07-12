@@ -1,41 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <base href="/piyushagarwal">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Primary Meta Tags -->
-<title>Piyush Agrawal | Front End Web Developer</title>
-<meta name="title" content="Piyush Agrawal | Front End Web Developer">
-<meta name="description" content="Innovative Front End Developer with 1.5-year of experience building
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <base href="/piyushagarwal" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Primary Meta Tags -->
+    <title>Piyush Agrawal | Front End Web Developer</title>
+    <meta name="title" content="Piyush Agrawal | Front End Web Developer" />
+    <meta
+      name="description"
+      content="Innovative Front End Developer with 1.5-year of experience building
   and maintaining responsive web applications. Proficient in
-  Angular,HTML, CSS, typescript, JavaScript">
+  Angular,HTML, CSS, typescript, JavaScript"
+    />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://piyush132000.github.io/piyushagarwal/">
-<meta property="og:title" content="Piyush Agrawal | Front End Web Developer">
-<meta property="og:description" content="Innovative Front End Developer with 1.5-year of experience building
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://piyush132000.github.io/piyushagarwal/"
+    />
+    <meta
+      property="og:title"
+      content="Piyush Agrawal | Front End Web Developer"
+    />
+    <meta
+      property="og:description"
+      content="Innovative Front End Developer with 1.5-year of experience building
   and maintaining responsive web applications. Proficient in
-  Angular,HTML, CSS, typescript, JavaScript">
-<meta property="og:image" content="https://piyush132000.github.io/piyushagarwal/assets/images/frontend-development-tools.png">
+  Angular,HTML, CSS, typescript, JavaScript"
+    />
+    <meta
+      property="og:image"
+      content="https://piyush132000.github.io/piyushagarwal/assets/images/frontend-development-tools.png"
+    />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://piyush132000.github.io/piyushagarwal/">
-<meta property="twitter:title" content="Piyush Agrawal | Front End Web Developer">
-<meta property="twitter:description" content="Innovative Front End Developer with 1.5-year of experience building
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://piyush132000.github.io/piyushagarwal/"
+    />
+    <meta
+      property="twitter:title"
+      content="Piyush Agrawal | Front End Web Developer"
+    />
+    <meta
+      property="twitter:description"
+      content="Innovative Front End Developer with 1.5-year of experience building
   and maintaining responsive web applications. Proficient in
-  Angular,HTML, CSS, typescript, JavaScript">
-<meta property="twitter:image" content="https://piyush132000.github.io/piyushagarwal/assets/images/frontend-development-tools.png">
-</head>
-<body class="mat-typography">
-  <app-root></app-root>
-</body>
+  Angular,HTML, CSS, typescript, JavaScript"
+    />
+    <meta
+      property="twitter:image"
+      content="https://piyush132000.github.io/piyushagarwal/assets/images/frontend-development-tools.png"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body class="mat-typography">
+    <app-root></app-root>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
+    <script>
+      document.addEventListener(
+        "scroll",
+        (event) => {
+          const aosAnimation = document.querySelectorAll("[data-aos]");
+          observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.intersectionRatio > 0) {
+                entry.target.classList.add("aos-animate");
+              } else {
+                entry.target.classList.remove("aos-animate");
+              }
+            });
+          });
+          aosAnimation.forEach((aosObject) => {
+            observer.observe(aosObject);
+          });
+        },
+        { capture: true, passive: true }
+      );
+    </script>
+  </body>
 </html>

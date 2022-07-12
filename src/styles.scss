@@ -10,16 +10,18 @@
 
 html,
 body {
-  height: 100%;
-  overflow-x:hidden;
-}
-body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   background-color: $color-body !important;
   width: 100vw;
   height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y:visible;
+  overflow:scroll;
+  scroll-behavior: smooth;
+
+  //overflow-x: hidden;
   ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -43,57 +45,54 @@ body {
   }
 
 }
+// body>div {overflow-x:hidden;
+// }
+
 
 .containers {
   width: 100%;
   height: 100%;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  overflow: scroll;
-  scrollbar-width: 10px;
-  scroll-behavior: smooth;
+}
 
-  .sections {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
+.sections {
+  overflow-x: visible;
+  width: 100vw;
+  height: 100%;
+  scroll-snap-align: start;
 
-    .awesome-button{
-      cursor: pointer;
-      width: 100px;
-      height: 20px;
-      display: flex;
-      margin-left: 70px;
-      margin-top: 10px;
-      font-size: $font-size;
-      text-decoration: none;
-      color: $color-black;
-      justify-content: center;
-      padding: 25px 10px;
-      background-color: $color-white;
-      align-items: center;
-      border-radius: 10px;
-      box-shadow: 0 1.5rem 4rem rgb($color-white , 0.4);
-      @media (max-width:600px) {
+}
 
-        margin-left: 10vw;
-      }
+.awesome-button{
+  cursor: pointer;
+  width: 100px;
+  height: 20px;
+  display: flex;
+  margin-left: 70px;
+  margin-top: 10px;
+  font-size: $font-size;
+  text-decoration: none;
+  color: $color-black;
+  justify-content: center;
+  padding: 25px 10px;
+  background-color: $color-white;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 1.5rem 4rem rgb($color-white , 0.4);
+  @media (max-width:600px) {
 
-      &:hover{
-        transform: translateY(-3px);
-        transition: all;
-      }
+    margin-left: 10vw;
+  }
+
+  &:hover{
+    transform: translateY(-3px);
+    transition: all;
+  }
 
 
-      &:active{
-        box-shadow: 0 .5rem 2rem rgb($color-white , 0.4);
-        transform: translateY(1px);
-        transition: all;
-      }
-    }
-
-
+  &:active{
+    box-shadow: 0 .5rem 2rem rgb($color-white , 0.4);
+    transform: translateY(1px);
+    transition: all;
   }
 }
 

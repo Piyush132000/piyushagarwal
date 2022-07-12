@@ -1,9 +1,9 @@
 .home-main {
-  width: 100vw;
   @media (max-width: 600px) {
     background-image: url("../../assets/images/frontend-development-tools.png");
     background-repeat: space;
-    background-size: contain;
+    background-size: cover;
+    z-index: -1;
     justify-content: center;
     flex-direction: column-reverse;
     height: 100vh;
