@@ -1,12 +1,12 @@
 header {
-  width: 100%;
-  padding: 10px;
-  background-color: $color-transparent;
+  top:0;
+  left: 0;
+  z-index: 1;
   position: fixed;
 
   .mat-toolbar {
-    // height: 60px;
-    z-index: 10;
+    background-color: $color-transparent;
+    width: 100vw;
     padding: 10px;
     border-radius: 10px;
     background-color: $color-transparent;
