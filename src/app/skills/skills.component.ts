@@ -5,11 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent {
 
-  constructor() { }
+  images: any[] = [ { img:'../../assets/images/js.png', animation:'slid-up'
+  },
+  { img:'./assets/images/angular1.png', animation:'slide-down'
+  },
+  { img:'./assets/images/icons8-git-100.png', animation:'slid-up'
+  },
+  { img:'../assets/images/icons8-typescript.png', animation:'slide-down'
+  },{ img:'../../assets/images/icons8-react-native-100.png',animation:'slid-up' }
 
-  ngOnInit(): void {
-  }
+  ]
+
+
 
 }
