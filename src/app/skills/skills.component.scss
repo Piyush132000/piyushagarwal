@@ -1,4 +1,14 @@
 
+
+
+.introduction_about-me{
+
+  @media (max-width:600px) {
+      padding: 10px;
+    width: 80% !important;
+    margin-bottom: -84px;
+  }
+}
 .introduction_about-me_content{
 
   @media (max-width:600px) {
