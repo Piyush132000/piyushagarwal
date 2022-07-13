@@ -33,7 +33,7 @@
     }
       h1 {
         width: 100%;
-        font-family: inherit;
+        font-family:'futuramedium', monospace;
         font-size: 5vw;
         color: $color-white;
         @media (max-width: 600px) {
@@ -43,8 +43,8 @@
 
       &_about {
         margin-top: 40px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: $font-size;
+        font-family:'futuramedium', monospace;
+        font-size: 14px;
         color: $color-white;
         font-weight: 100;
         word-spacing: 1px;
