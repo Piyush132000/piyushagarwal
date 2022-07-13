@@ -8,14 +8,20 @@ import { HomeComponent } from './home/home/home.component';
 import { HeaderComponent } from './home/header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule}  from '@angular/material/icon';
-import { HomeMainComponent } from './home/home-main/home-main.component'
+import { HomeMainComponent } from './home/home-main/home-main.component';
+import { ProjectComponent } from './project/project.component';
+import { SkillsComponent } from './skills/skills.component';
+import { IntroductionComponent } from './introduction/introduction.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    HomeMainComponent
+    HomeMainComponent,
+    ProjectComponent,
+    SkillsComponent,
+    IntroductionComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
