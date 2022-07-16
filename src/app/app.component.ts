@@ -8,5 +8,9 @@ import * as AOS from 'aos';
 export class AppComponent  {
   title = 'Piyush Agrawal';
 
+  constructor(){
+    AOS.init();
+  }
+
 
  }

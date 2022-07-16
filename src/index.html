@@ -67,44 +67,9 @@
       property="twitter:image"
       content="https://piyush132000.github.io/piyushagarwal/assets/images/frontend-development-tools.png"
     />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body class="mat-typography">
     <app-root></app-root>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 2000,
-      });
-    </script>
-    <script>
-      document.addEventListener(
-        "scroll",
-        (event) => {
-          let i = 1;
-
-          const aosAnimation = document.querySelectorAll("[data-aos]");
-          observer = new IntersectionObserver((entries) => {
-
-            entries.forEach((entry) => {
-
-              if (entry.intersectionRatio > 0) {
-                entry.target.classList.add("aos-animate");
-              } else {
-                entry.target.classList.remove("aos-animate");
-                i =0;
-              }
-            });
-
-          });
-          aosAnimation.forEach((aosObject) => {
-            observer.observe(aosObject)
-          });
-        },
-
-        { capture: true, passive: true , once:true }
-      );
-    </script>
   </body>
 </html>
