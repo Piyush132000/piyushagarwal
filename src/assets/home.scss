@@ -3,7 +3,7 @@ header {
   left: 0;
   z-index: 1;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   transform-style: preserve-3d;
   [data-aos] { pointer-events: none; &.aos-animate { pointer-events: auto; } }
 

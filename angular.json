@@ -32,7 +32,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/aos/dist/aos.css"
             ],
             "scripts": []
           },
@@ -101,8 +102,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss",
-              "./node_modules/aos/dist/aos.css"
+              "src/styles.scss"
+
             ],
             "scripts": [
             ]

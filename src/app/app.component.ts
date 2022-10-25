@@ -1,5 +1,5 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+import { Component } from '@angular/core';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,15 +7,6 @@ import * as AOS from 'aos';
 })
 export class AppComponent  {
   title = 'Piyush Agrawal';
-
-  constructor(){
-    AOS.init({
-      once:false,
-      delay:200,
-      duration:2000,
-      mirror:true
-    });
-  }
 
 
  }
