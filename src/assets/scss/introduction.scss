@@ -1,5 +1,6 @@
 .introduction {
   height: 100%;
+  width: 100%;
   @extend .col-12;
   display: flex;
   flex-direction: row !important;
@@ -11,11 +12,13 @@
   }
 
   &_about-me {
-    @extend .col-6;
-
     display: flex;
     padding: 15rem 0rem;
-    width: 100%;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
     align-items: center;
     flex-direction: column;
 
@@ -25,9 +28,11 @@
     }
 
     &_content {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+
+      display: flex;
+      flex-direction: column;
+    width: 80%;
+    padding: 20px;
     @media (max-width: 600px) {
       width: 100%;
     }
@@ -88,14 +93,16 @@
   }
 
   &_about_img {
-    padding: 15rem 0rem;
-    @extend .col-6;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding: 15rem 0rem;
     box-shadow: -11px 2px 12px -8px rgba(0, 0, 0, 0.75);
 
     @media (max-width: 600px) {
+      width: 90%;
       box-shadow: none;
       padding: 10px;
     }
@@ -103,13 +110,9 @@
     img {
       border-radius: 50%;
       filter: brightness(1.2);
-      width: 500px;
-      height: 500px;
-      @extend .shadow;
-      @media (max-width: 600px) {
-        width: 200px;
-        height: 200px;
-      }
+      width: max(30vw, 50%);
+      height: max(30vw, 50%);
+
     }
   }
 }

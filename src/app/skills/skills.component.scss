@@ -4,9 +4,10 @@
 .introduction_about-me{
 
   @media (max-width:600px) {
-      padding: 10px;
-    width: 80% !important;
+    padding: 10px;
+    width: 90% !important;
     margin-bottom: -84px;
+    height: 50%;
   }
 }
 .introduction_about-me_content{
@@ -34,7 +35,9 @@
   }
 
   img{
-    width: 150px;height:150px; border-radius: 50%;
+    width: min(20vw , 150px);
+    height:min(20vw , 150px);
+    border-radius: 50%;
   }
 
   span{
@@ -44,7 +47,7 @@
     font-weight: 100;
   }
   @media (max-width:600px) {
-    height:30vh;
+    height:50%;
     width: 100%;
     .div-img{
       width: 150px;height:80px;
