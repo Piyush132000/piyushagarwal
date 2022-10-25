@@ -24,21 +24,20 @@
 
     @media (max-width: 600px) {
       padding: 10px;
-      width: 80% !important;
+      width: 100% !important;
     }
 
     &_content {
-
       display: flex;
       flex-direction: column;
-    width: 80%;
-    padding: 20px;
-    @media (max-width: 600px) {
-      width: 100%;
-    }
+      width: 80%;
+      padding: 20px;
+      @media (max-width: 600px) {
+        width: 100%;
+      }
       h1 {
         width: 100%;
-        font-family:'futuramedium', monospace;
+        font-family: "futuramedium", monospace;
         font-size: 5vw;
         color: $color-white;
         @media (max-width: 600px) {
@@ -48,7 +47,7 @@
 
       &_about {
         margin-top: 40px;
-        font-family:'futuramedium', monospace;
+        font-family: "futuramedium", monospace;
         font-size: 14px;
         color: $color-white;
         font-weight: 100;
@@ -102,7 +101,7 @@
     box-shadow: -11px 2px 12px -8px rgba(0, 0, 0, 0.75);
 
     @media (max-width: 600px) {
-      width: 90%;
+      width: 100%;
       box-shadow: none;
       padding: 10px;
     }
@@ -112,7 +111,12 @@
       filter: brightness(1.2);
       width: max(30vw, 50%);
       height: max(30vw, 50%);
-
+      @media (max-width: 600px) {
+        width: 250px;
+        height:250px;
+        box-shadow: none;
+        padding: 10px;
+      }
     }
   }
 }
